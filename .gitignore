@@ -111,7 +111,7 @@ build/Release
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
-!.vscode/tasks.json
+!.vscode/tasks.jsonc
 !.vscode/launch.json
 !.vscode/extensions.json
 
