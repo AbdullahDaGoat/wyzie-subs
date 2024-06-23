@@ -4,7 +4,7 @@ import { RequestType } from '../types'
 
 const CONTACT_EMAIL = 'dev@sudo-flix.lol'
 // Modify this when possible
-const LANDING_PAGE = 'https://wyzie.app'
+const LANDING_PAGE = 'subs.wyzie.ru'
 
 export default eventHandler(async (event) => {
   const query = getQuery(event)
