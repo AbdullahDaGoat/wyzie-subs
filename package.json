@@ -5,6 +5,7 @@
     "dev": "nitro dev",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
+    "build:cloudflare": "NITRO_PRESET=cloudflare npm run build",
     "prepare": "nitro prepare",
     "preview": "node .output/server/index.mjs"
   },
