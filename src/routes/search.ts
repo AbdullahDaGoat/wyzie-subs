@@ -7,17 +7,19 @@ export default eventHandler(async (event) => {
   const episode = query.episode ? parseInt(query.episode as string) : undefined
   const language = query.language as string | undefined
 
-  // Error handling functions
-  const createErrorResponse = (code: number, message: string, details: string, example?: string) => ({
-    status: 'error',
-    code,
-    message,
-    details,
-    example,
-    fyi: `For more information, please visit our landing page or contact us at ${CONTACT_EMAIL}.`
-  })
-
   // Input validation
+  try {
+    verifyApiKey(event, query.token as string);
+  } catch (error) {
+    if (error instanceof Error && error.message === 'API key missing or invalid') {
+      return createErrorResponse(
+        401,
+        '[Authentication Error] - Unauthorized',
+        'API key missing or invalid. Please provide a valid API key in the \'API-Token\' header.',
+      );
+    }
+  }
+
   if (!imdbId) {
     return createErrorResponse(
       400,
