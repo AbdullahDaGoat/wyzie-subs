@@ -3,8 +3,6 @@ import { search } from '../utils/functions' // Note: Only importing the combined
 import { RequestType } from '../utils/types'
 
 const CONTACT_EMAIL = 'dev@sudo-flix.lol'
-// Modify this when possible
-const LANDING_PAGE = 'subs.wyzie.ru'
 
 export default eventHandler(async (event) => {
   const query = getQuery(event)
@@ -20,8 +18,7 @@ export default eventHandler(async (event) => {
     message,
     details,
     example,
-    contact: CONTACT_EMAIL,
-    fyi: `For more information, please visit our landing page at ${LANDING_PAGE} or contact us at ${CONTACT_EMAIL}.`
+    fyi: `For more information, please visit our landing page or contact us at ${CONTACT_EMAIL}.`
   })
 
   // Input validation
