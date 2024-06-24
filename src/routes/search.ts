@@ -1,7 +1,3 @@
-import { eventHandler, getQuery } from 'h3'
-import { search } from '../utils/functions' // Note: Only importing the combined search function
-import { RequestType } from '../utils/types'
-
 const CONTACT_EMAIL = 'dev@sudo-flix.lol'
 
 export default eventHandler(async (event) => {

@@ -1,3 +1,4 @@
+// My lazy ass didnt wanna change this to a Vue.js or Nuxt.js project so instead i made this dont touch this unless yk what to do
 export default eventHandler(() => {
   return `
     <!DOCTYPE html>
@@ -7,6 +8,7 @@ export default eventHandler(() => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Wyzie Subs - Subtitles API</title>
       <script src="https://cdn.tailwindcss.com"></script>
+      <script>const link=document.createElement('link');link.rel='icon';link.href='https://media.discordapp.net/attachments/1248111881009496187/1254645762285895741/image.png?ex=667a3f6b&is=6678edeb&hm=c376791542bc8aefc57505e6db555b43016ec3ff461c68281d96fda5c7517720&=&format=webp&quality=lossless&width=994&height=994';document.head.appendChild(link);</script>
       <script>
           tailwind.config = {
             darkMode: 'class',
@@ -20,7 +22,7 @@ export default eventHandler(() => {
           }
       </script>
     </head>
-    <body class="bg-[#080808] overflow-y-auto text-gray-800 min-h-screen flex flex-col items-center justify-center p-4">
+    <body class="bg-[#080808] overflow-hidden text-gray-800 min-h-screen flex flex-col items-center justify-center p-4">
       <div class="bg-[#101010] rounded-lg shadow-2xl p-8 max-w-2xl w-full">
         <h1 class="text-4xl font-bold text-primary-700 mb-6">
           Wyzie <span class="text-[#e0e0e0]">Subs</span>

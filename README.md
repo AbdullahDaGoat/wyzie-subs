@@ -47,5 +47,6 @@
 - [ ] Implement subtitle synchronization tools
 - [ ] Develop a user reputation system
 - [ ] Create a subtitle version control system
+- [ ] Update index.ts to show Basic usage and then a link to more Advance usage (for above implementations) 
 
 For more information on the OpenSubtitles API, refer to the [OpenSubtitles REST API Documentation](https://opensubtitles.stoplight.io/docs/opensubtitles-api/e3750fd63a100-getting-star).
