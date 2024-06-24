@@ -1,4 +1,7 @@
+import { RequestType } from './types';
+
 const CONTACT_EMAIL = 'dev@sudo-flix.lol'
+
 export async function fetchSubtitles(request: RequestType) {
   const { imdbId, season, episode } = request;
   const url = `https://rest.opensubtitles.org/search/${season && episode ? `episode-${episode}/` : ''}imdbid-${imdbId}${season ? `/season-${season}` : ''}`;

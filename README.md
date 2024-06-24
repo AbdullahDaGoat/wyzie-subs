@@ -13,7 +13,7 @@
 - [x] Seasons
 - [x] Episodes
 - [x] Language
-- [ ] Adult vs. general-friendly content filter
+- [x] Switch to using proper OpenSubtitles API instead of rest
 - [ ] Multiple languages in one fetch response
 
 #### Admin Panel
