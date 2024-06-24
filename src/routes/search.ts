@@ -1,9 +1,4 @@
-import { eventHandler, getQuery } from 'h3'
-import { search } from '../utils/functions'
-import { createErrorResponse } from '../utils/utils'
-import { verifyApiKey, createSecretKey, getEnvironmentVariable } from '../utils/auth'
-import { RequestType } from '../utils/types'
-
+const CONTACT_EMAIL = 'dev@sudo-flix.lol'
 
 export default eventHandler(async (event) => {
   const query = getQuery(event)
