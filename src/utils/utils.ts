@@ -1,5 +1,3 @@
-import { RequestType } from './types';
-
 const CONTACT_EMAIL = 'dev@sudo-flix.lol'
 
 export async function fetchSubtitles(request: RequestType) {

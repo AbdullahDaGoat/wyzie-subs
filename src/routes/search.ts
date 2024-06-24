@@ -1,5 +1,4 @@
-const CONTACT_EMAIL = 'dev@sudo-flix.lol'
-
+// Ignore all TS errors in this file  -  ̄\_(ツ)_/ ̄
 export default eventHandler(async (event) => {
   const query = getQuery(event)
   const imdbId = query.imdbId as string
