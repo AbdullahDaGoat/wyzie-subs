@@ -68,12 +68,12 @@ export default eventHandler(async (event) => {
     )
   }
 
-  if (language && !/^[a-z]{2,3}(-[A-Z]{2})?$/.test(language)) {
+  if (language && !/^[a-z]{2,3}(-[A-Z]{2})?(,[a-z]{2,3}(-[A-Z]{2})?)*$/.test(language)) {
     return createErrorResponse(
       400,
       'Invalid language format',
-      'Language must be in ISO 639-1 or ISO 639-2 format, optionally followed by a region code.',
-      '/search?imdbId=tt0111161&language=en or /search?imdbId=tt0111161&language=en-US'
+      'Languages must be in ISO 639-1 or ISO 639-2 format, optionally followed by a region code, separated by commas.',
+      '/search?imdbId=tt0111161&language=en,es,fr-FR'
     )
   }
 
@@ -81,7 +81,8 @@ export default eventHandler(async (event) => {
 
   try {
     // Directly passing language, whether it's undefined or a string
-    return await search(request, language)
+    const languages = language ? language.split(',') : undefined;
+    return await search(request, languages)  
   } catch (error) {
     console.error(error)
     
