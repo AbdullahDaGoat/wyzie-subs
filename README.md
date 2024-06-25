@@ -14,13 +14,7 @@
 - [x] Episodes
 - [x] Language
 - [x] Switch to using proper OpenSubtitles API instead of rest
-- [ ] Multiple languages in one fetch response
-
-#### Admin Panel
-- [ ] Separate checkmarks and X icons for API and OpenSubtitles
-- [ ] Detailed information on click (copyable)
-- [ ] Auto-close feature after copying
-- [ ] Close button (X icon)
+- [x] Multiple languages in one fetch response
 
 #### Additional Filters
 1. Language Filter
