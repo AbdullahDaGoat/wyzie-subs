@@ -24,34 +24,44 @@ export default eventHandler(() => {
     </head>
     <body class="bg-[#080808] overflow-hidden text-gray-800 min-h-screen flex flex-col items-center justify-center p-4">
       <div class="bg-[#101010] rounded-lg shadow-2xl p-8 max-w-2xl w-full">
-        <h1 class="text-4xl font-bold text-primary-700 mb-6">
-          Wyzie <span class="text-[#e0e0e0]">Subs</span>
-        </h1>
-        <p class="text-[#c0c0c0] mb-8">
-          A free & libre open-subtitles scraping API
-        </p>
-        <div class="space-y-4">
-          <div class="bg-[#1f1f1f] p-4 rounded-md flex flex-col gap-1">
-            <h3 class="font-semibold text-[#d0d0d0]">Search by IMDB ID</h3>
-            <a href="/search?imdbId=tt3659388">
-              <code class="text-sm text-primary-500 break-words">/search?imdbId=tt3659388</code>
-            </a>
-          </div>
-          <div class="bg-[#1f1f1f] p-4 rounded-md flex flex-col gap-1">
-            <h3 class="font-semibold text-[#d0d0d0]">Search by IMDB ID, season, and episode</h3>
-            <a href="/search?imdbId=tt0121955&season=1&episode=1">
-              <code class="text-sm text-primary-500 break-words">/search?imdbId=tt0121955&season=1&episode=1</code>
-            </a>
-          </div>
-          <div class="bg-[#1f1f1f] p-4 rounded-md flex flex-col gap-1">
-            <h3 class="font-semibold text-[#d0d0d0]">Search by IMDB ID and language</h3>
-            <a href="/search?imdbId=tt3659388&language=en">
-              <code class="text-sm text-primary-500 break-words">/search?imdbId=tt3659388&language=en</code>
-            </a>
-            <p class="text-[#c0c0c0] break-words">Also compatible with specific seasons and episodes</p>
-          </div>
-        </div>
-      </div>
+  <h1 class="text-4xl font-bold text-primary-700 mb-6">
+    Wyzie <span class="text-[#e0e0e0]">Subs</span>
+  </h1>
+  <p class="text-[#c0c0c0] mb-4">
+    A free & libre open-subtitles scraping API
+  </p>
+  <p class="text-[#a0a0a0] mb-8 flex items-center">
+    For advance usage or more information head over to our docs 
+    <svg class="w-4 h-4 ml-2 text-[#a0a0a0]" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+  </p>
+  
+  <h2 class="text-2xl font-semibold text-[#d0d0d0] mb-4 flex items-center">
+    Basic Usage
+    <svg class="w-4 h-4 ml-2 text-[#d0d0d0]" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+  </h2>
+  
+  <div class="space-y-4 mb-8">
+    <div class="bg-[#1f1f1f] p-4 rounded-md flex flex-col gap-1">
+      <h3 class="font-semibold text-[#d0d0d0]">Search by IMDB ID</h3>
+      <a href="/search?imdbId=tt3659388">
+        <code class="text-sm text-primary-500 break-words">/search?imdbId=tt3659388</code>
+      </a>
+    </div>
+    <div class="bg-[#1f1f1f] p-4 rounded-md flex flex-col gap-1">
+      <h3 class="font-semibold text-[#d0d0d0]">Search by IMDB ID, season, and episode</h3>
+      <a href="/search?imdbId=tt0121955&season=1&episode=1">
+        <code class="text-sm text-primary-500 break-words">/search?imdbId=tt0121955&season=1&episode=1</code>
+      </a>
+    </div>
+    <div class="bg-[#1f1f1f] p-4 rounded-md flex flex-col gap-1">
+      <h3 class="font-semibold text-[#d0d0d0]">Search by IMDB ID and language</h3>
+      <a href="/search?imdbId=tt3659388&language=en">
+        <code class="text-sm text-primary-500 break-words">/search?imdbId=tt3659388&language=en</code>
+      </a>
+      <p class="text-[#c0c0c0] break-words">Also compatible with specific seasons and episodes</p>
+    </div>
+  </div>
+</div>
       <footer class="mt-10 text-center text-gray-500 text-sm">
         <p class="flex justify-center items-center space-x-2 mt-2">
           <a href="https://github.com/sussy-code/wyzie-subs" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 text-dark" >

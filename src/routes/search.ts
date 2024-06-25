@@ -7,17 +7,17 @@ export default eventHandler(async (event) => {
   const language = query.language as string | undefined
 
   // Input validation
-  try {
-    verifyApiKey(event, query.token as string);
-  } catch (error) {
-    if (error instanceof Error && error.message === 'API key missing or invalid') {
-      return createErrorResponse(
-        401,
-        '[Authentication Error] - Unauthorized',
-        'API key missing or invalid. Please provide a valid API key in the \'API-Token\' header.',
-      );
-    }
-  }
+  // try {
+  //   verifyApiKey(event, query.token as string);
+  // } catch (error) {
+  //   if (error instanceof Error && error.message === 'API key missing or invalid') {
+  //     return createErrorResponse(
+  //       401,
+  //       '[Authentication Error] - Unauthorized',
+  //       'API key missing or invalid. Please provide a valid API key in the \'API-Token\' header.',
+  //     );
+  //   }
+  // }
 
   if (!imdbId) {
     return createErrorResponse(
