@@ -1,9 +1,15 @@
 import { subtle } from 'crypto';
 import { H3Event } from 'h3';
 
-// TODO: The idea is that we have another KDF a layer below this so we can create
-// master keys and then derive keys from that master key. This way we give the
-// public one key and give others different keys compartmentalizing the access. :smart_guy_tapping_head:
+// API Key Creation
+//   We have a 256 char “master key” which we pass through a KDF then it gives us a “api key” which we can use while requesting the subs.wyzie api. 
+
+// API Key Validation
+//   1. We get a request
+//   2. We check the header for “api-key” value if it’s not present then we automatically through 401
+//   3. We check the validity of the “api key” by passing it back through the KDF
+//   4. The KDF either returns true or false showing the validity of the key
+//   5. We block them or allow them to use the api
 
 type KeyType = {
   kdf: string;
@@ -12,7 +18,7 @@ type KeyType = {
 };
 
 export function verifyApiKey(event: H3Event, query?: string): boolean {
-  const apiKey = event.headers.get('API-Token') || query;
+  const apiKey = event.headers.get('API-Key') || query;
   if (!apiKey || !verifySecretKey(getEnvironmentVariable(), apiKey)) {
     throw new Error('API key missing or invalid');
   }
