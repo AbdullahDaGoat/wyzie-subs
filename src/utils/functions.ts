@@ -1,4 +1,4 @@
-export async function search(request: RequestType, language?: string): Promise<ResponseType[] | ReturnType<typeof createErrorResponse>> {
+export async function search(request: RequestType, languages?: string[]): Promise<ResponseType[]> {
   try {
     const data = await fetchSubtitles(request);
 
@@ -6,9 +6,12 @@ export async function search(request: RequestType, language?: string): Promise<R
       throw new Error('Unexpected response format');
     }
 
+    console.log('Available languages:', data.map(sub => sub.ISO639));
+    console.log('Requested languages:', languages);
+
     let filteredData = data;
-    if (language) {
-      filteredData = data.filter((sub) => sub.language === language);
+    if (languages && languages.length > 0) {
+      filteredData = data.filter((sub) => languages.includes(sub.ISO639));
     }
 
     if (filteredData.length === 0) {
@@ -19,7 +22,16 @@ export async function search(request: RequestType, language?: string): Promise<R
       );
     }
 
-    return filteredData;
+    const subtitles: ResponseType[] = filteredData.map((sub): ResponseType => ({
+      id: sub.IDSubtitleFile,
+      url: sub.SubDownloadLink.replace('.gz', '').replace('download/', 'download/subencoding-utf8/'),
+      type: sub.SubFormat,
+      language: sub.ISO639,
+      hasCorsRestrictions: false,
+    }));
+
+    return subtitles;
+
   } catch (error) {
     console.error('Error in search function:', error);
     return createErrorResponse(
