@@ -15,10 +15,9 @@
 - [x] Language
 - [x] Switch to using proper OpenSubtitles API instead of rest
 - [x] Multiple languages in one fetch response
+- [ ] Allow TMDB API usage aswell
 
 #### Additional Filters
-1. Language Filter
-2. Movie/Show ID Filter (IMDB, TheMovieDB, etc.)
 3. Subtitle Rating Filter
 4. Subtitle Format Filter (.srt, .sub, etc.)
 5. Subtitle Release Date Filter
