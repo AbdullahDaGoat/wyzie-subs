@@ -2,6 +2,7 @@ export interface RequestType {
   imdbId: string;
   season?: number;
   episode?: number;
+  language?: string; // ISO639 locale
 }
 
 export interface ResponseType {

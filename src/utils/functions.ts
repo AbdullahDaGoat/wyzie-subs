@@ -1,5 +1,3 @@
-import { fetchSubtitles, createErrorResponse } from './utils';
-
 export async function search(request: RequestType, language?: string): Promise<ResponseType[] | ReturnType<typeof createErrorResponse>> {
   try {
     const data = await fetchSubtitles(request);
@@ -11,6 +9,14 @@ export async function search(request: RequestType, language?: string): Promise<R
     let filteredData = data;
     if (language) {
       filteredData = data.filter((sub) => sub.language === language);
+    }
+
+    if (filteredData.length === 0) {
+      return createErrorResponse(
+        404,
+        'Not found',
+        'No subtitles found for the given request.'
+      );
     }
 
     return filteredData;

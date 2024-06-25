@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const PROXY_URL = 'https://torn-unicorn.fly.dev/';
 const CONTACT_EMAIL = 'dev@sudo-flix.lol';
 
@@ -20,7 +21,7 @@ export async function proxyFetch(url: string, options?: RequestInit): Promise<Re
 
     const proxyUrl = `${PROXY_URL}?url=${encodedUrl}&data=${encodedData}`;
 
-    console.log('Proxy URL:', proxyUrl);
+    // console.log('Proxy URL:', proxyUrl);
 
     const proxyResponse = new Response(responseBody, {
       status: directResponse.status,
