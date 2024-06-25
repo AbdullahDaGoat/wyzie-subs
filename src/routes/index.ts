@@ -28,7 +28,7 @@ export default eventHandler(() => {
     Wyzie <span class="text-[#e0e0e0]">Subs</span>
   </h1>
   <p class="text-[#c0c0c0] mb-4">
-    A free & libre open-subtitles scraping API
+    A free & libre open-subtitles scraping API that uses proxied requests instead of fetching directly from the API.
   </p>
   <p class="text-[#a0a0a0] mb-8 flex items-center">
     For advance usage or more information head over to our docs 
