@@ -8,7 +8,7 @@ export default eventHandler(() => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Wyzie Subs - Subtitles API</title>
       <script src="https://cdn.tailwindcss.com"></script>
-      <script>const link=document.createElement('link');link.rel='icon';link.href='https://media.discordapp.net/attachments/1248111881009496187/1254645762285895741/image.png?ex=667a3f6b&is=6678edeb&hm=c376791542bc8aefc57505e6db555b43016ec3ff461c68281d96fda5c7517720&=&format=webp&quality=lossless&width=994&height=994';document.head.appendChild(link);</script>
+      <script>const link=document.createElement('link');link.rel='icon';link.href='https://media.discordapp.net/attachments/1248111881009496187/1254999716492742687/wYZIE_1.png?ex=667b8911&is=667a3791&hm=5ff87bcbb696390f54b8d7c668618e77b0a49f67761944729503c6d9a7d44747&=&format=webp&quality=lossless&width=994&height=994';document.head.appendChild(link);</script>
       <script>
           tailwind.config = {
             darkMode: 'class',
